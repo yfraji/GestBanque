@@ -2,10 +2,10 @@
 {
     public class Courant
     {
-        string numero { get; set; }
-        double solde { get; set; }
-        double ligneDeCredit { get; set; }
-        Personne titulaire { get; set; }
+        public string numero { get; set; }
+        public double solde { get; set; }
+        public double ligneDeCredit { get; set; }
+        public Personne titulaire { get; set; }
 
         public void Retrait(double montant)
         {
