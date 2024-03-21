@@ -9,12 +9,16 @@
 
         public void Retrait(double montant)
         {
+            if (this.solde - montant > -ligneDeCredit) 
+            {
+                this.solde = this.solde - montant;
+            }
 
         }
 
         public void Depot(double montant)
         {
-
+            this.solde = this.solde + montant;
         }
     }
 }
