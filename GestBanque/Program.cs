@@ -6,6 +6,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        Banque banque = new Banque()
+        {
+            Nom = "My favorite bank"
+        };
+
         Personne doeJohn = new Personne()
         {
             Nom = "Doe",
@@ -20,15 +25,21 @@ class Program
             Titulaire = doeJohn
         };
 
-        courant.Depot(-100);
-        Console.WriteLine($"Depot de -100 : {courant.Solde}");
-        courant.Depot(100);
-        Console.WriteLine($"Depot de 100 : {courant.Solde}");
-        courant.Retrait(-100);
-        Console.WriteLine($"Retrait de -100 : {courant.Solde}");
-        courant.Retrait(100);
-        Console.WriteLine($"Retrait de 100 : {courant.Solde}");
-        courant.Retrait(600);
-        Console.WriteLine($"Retrait de 600 : {courant.Solde}");
+        banque.Ajouter(courant);
+        
+        banque["0001"]?.Depot(-100);
+        Console.WriteLine($"Depot de -100 : {banque["0001"]?.Solde}");
+        banque["0001"]?.Depot(100);
+        Console.WriteLine($"Depot de 100 : {banque["0001"]?.Solde}");
+        banque["0001"]?.Retrait(-100);
+        Console.WriteLine($"Retrait de -100 : {banque["0001"]?.Solde}");
+        banque["0001"]?.Retrait(100);
+        Console.WriteLine($"Retrait de 100 : {banque["0001"]?.Solde}");
+        banque["0001"]?.Retrait(600);
+        Console.WriteLine($"Retrait de 600 : {banque["0001"]?.Solde}");
+
+        banque.Supprimer("0001");
+
+        Console.WriteLine(banque["0001"] is null);
     }
 }
