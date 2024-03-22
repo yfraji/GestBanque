@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestBanque", "GestBanque\GestBanque.csproj", "{96904B00-DC42-4221-9FAD-E7D8337FD6E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestBanque", "GestBanque\GestBanque.csproj", "{96904B00-DC42-4221-9FAD-E7D8337FD6E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoCelsiusFahrenheit", "ExoCelsiusFahrenheit\ExoCelsiusFahrenheit.csproj", "{2C2257CA-89F3-4EE2-B719-8B3639F54C61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
