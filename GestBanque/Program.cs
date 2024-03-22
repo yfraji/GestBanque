@@ -6,18 +6,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        Personne frajiYasser = new Personne()
+        Personne doeJohn = new Personne()
         {
-            Nom = "Fraji",
-            Prenom = "Yasser",
-            DateNaiss = new DateTime(2000, 8, 18)
+            Nom = "Doe",
+            Prenom = "John",
+            DateNaiss = new DateTime(1970, 1, 1)
         };
 
         Courant courant = new Courant()
         {
             Numero = "0001",
             LigneDeCredit = 500,
-            Titulaire = frajiYasser
+            Titulaire = doeJohn
         };
 
         courant.Depot(-100);
