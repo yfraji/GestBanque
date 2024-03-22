@@ -91,4 +91,19 @@ public class Courant
 
         Solde -= montant;
     }
+
+    public static double operator +(double Solde, Courant c2)
+    {
+        double somme = 0;
+
+        if (Solde >= 0)
+        {
+            somme += Solde;
+        }
+        if (c2.Solde >= 0)
+        {
+            somme += c2.Solde;
+        }
+        return somme;
+    }
 }

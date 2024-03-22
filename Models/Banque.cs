@@ -31,4 +31,18 @@ public class Banque
 
         _comptes.Remove(Numero);
     }
+
+    public double AvoirDesComptes(Personne titulaire)
+    {
+        double total = 0;
+        foreach (Courant courant in _comptes.Values)
+        {
+            if (courant.Titulaire == titulaire)
+            {
+                total += courant;
+            }
+        }
+            
+        return total;
+    }
 }
