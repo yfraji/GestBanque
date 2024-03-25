@@ -38,6 +38,11 @@ class Program
             LigneDeCredit = 500,
             Titulaire = doeJohn
         };
+        Epargne epargneJD1 = new Epargne()
+        { 
+            Numero = "0004",
+            Titulaire = doeJohn
+        };
 
         banque.Ajouter(courantJD1);
         banque.Ajouter(courantJD2);
