@@ -47,22 +47,30 @@ class Program
         banque.Ajouter(courantJD1);
         banque.Ajouter(courantJD2);
         banque.Ajouter(courantJD3);
+        banque.Ajouter(epargneJD1);
         
         banque["0001"]?.Depot(1000);
-        Console.WriteLine($"Depot de 1000 : {banque["0001"]?.Solde}");
+        Console.WriteLine($"Courant 1 de JD, Depot de 1000 : {banque["0001"]?.Solde}");
         banque["0002"]?.Depot(1000);
-        Console.WriteLine($"Depot de 100 : {banque["0002"]?.Solde}");
+        Console.WriteLine($"Courant 2 de JD, Depot de 1000 : {banque["0002"]?.Solde}");
         banque["0003"]?.Retrait(300);
-        Console.WriteLine($"Retrait de 400 : {banque["0003"]?.Solde}");
+        Console.WriteLine($"Courant 3 de JD, Retrait de 300 : {banque["0003"]?.Solde}");
+        banque["0004"]?.Depot(1500);
+        Console.WriteLine($"Epargne 1 de JD,Depot de 1500 : {banque["0004"]?.Solde}");
+        banque["0004"]?.Retrait(2000);
+        Console.WriteLine($"Epargne 1 de JD,Retrait de 2000 : {banque["0004"]?.Solde}");
+
 
         Console.WriteLine($"Avoir des comptes de {doeJohn.Prenom} : {banque.AvoirDesComptes(doeJohn)}");
 
         banque.Supprimer("0001");
         banque.Supprimer("0002");
         banque.Supprimer("0003");
+        banque.Supprimer("0004");
 
         Console.WriteLine(banque["0001"] is null);
         Console.WriteLine(banque["0002"] is null);
         Console.WriteLine(banque["0003"] is null);
+        Console.WriteLine(banque["0004"] is null);
     }
 }

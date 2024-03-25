@@ -75,11 +75,13 @@ namespace Models
             if (!(montant > 0))
             {
                 Console.WriteLine("Retrait d'un montant négatif impossible"); // => Erreur : Exception
+                return;
             }
 
             if (Solde - montant < -ligneDeCredit)
             {
                 Console.WriteLine("Solde insuffisant"); // => Erreur : Exception
+                return;
             }
 
             Solde -= montant;

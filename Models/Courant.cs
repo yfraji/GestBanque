@@ -30,6 +30,7 @@ public class Courant : Compte
         if (ancienSolde >= 0D && Solde < 0)
         {
             Console.WriteLine("Solde insuffisant"); // => Erreur : Exception
+            return;
         }
     }
 
