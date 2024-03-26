@@ -18,27 +18,27 @@ class Program
             DateNaiss = new DateTime(1970, 1, 1)
         };
 
-        Courant courantJD1 = new Courant()
+        Compte courantJD1 = new Courant()
         {
             Numero = "0001",
             LigneDeCredit = 500,
             Titulaire = doeJohn
         };
 
-        Courant courantJD2 = new Courant()
+        Compte courantJD2 = new Courant()
         {
             Numero = "0002",
             LigneDeCredit = 500,
             Titulaire = doeJohn
         };
 
-        Courant courantJD3 = new Courant()
+        Compte courantJD3 = new Courant()
         {
             Numero = "0003",
             LigneDeCredit = 500,
             Titulaire = doeJohn
         };
-        Epargne epargneJD1 = new Epargne()
+        Compte epargneJD1 = new Epargne()
         { 
             Numero = "0004",
             Titulaire = doeJohn
