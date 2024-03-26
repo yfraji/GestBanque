@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Compte
+    public abstract class Compte
     {
         private string _numero;
         private double _solde;
@@ -85,6 +85,13 @@ namespace Models
             }
 
             Solde -= montant;
+        }
+
+        protected abstract double CalculInteret();
+
+        public void AppliquerInteret() 
+        {
+            Solde += CalculInteret();
         }
     }
 }
