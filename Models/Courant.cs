@@ -4,7 +4,7 @@ public class Courant : Compte
 {
     private double _ligneDeCredit;
 
-    public double LigneDeCredit
+    public override double LigneDeCredit
     {
         get
         {
@@ -19,18 +19,6 @@ public class Courant : Compte
                 return;
             }
             _ligneDeCredit = value;
-        }
-    }
-
-    public override void Retrait(double montant)
-    {
-        double ancienSolde = Solde;
-        Retrait(montant, LigneDeCredit);
-
-        if (ancienSolde >= 0D && Solde < 0)
-        {
-            Console.WriteLine("Solde insuffisant"); // => Erreur : Exception
-            return;
         }
     }
     protected override double CalculInteret() 

@@ -50,6 +50,19 @@ namespace Models
 
             Solde += montant;
         }
+        public virtual double LigneDeCredit
+        {
+            get
+            {
+                return 0D;
+            }
+
+            set
+            {
+                Console.WriteLine("On ne peut pas modifier une ligne de crédit.");  // Erreur : Exception
+                return;
+            }
+        }
 
         public static double operator +(double Solde, Compte c2)
         {

@@ -8,8 +8,9 @@ namespace Models
 {
     public interface IBanker : ICustomer
     {
-        public string Numero { get; }
-        public Personne Titulaire { get; }
-        public void AppliquerInteret();
+        string Numero { get; }
+        Personne Titulaire { get; }
+        double LigneDeCredit { get; set; }
+        void AppliquerInteret();
     }
 }
