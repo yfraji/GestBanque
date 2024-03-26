@@ -56,10 +56,9 @@ class Program
         banque["0003"]?.Retrait(300);
         Console.WriteLine($"Courant 3 de JD, Retrait de 300 : {banque["0003"]?.Solde}");
         banque["0004"]?.Depot(1500);
-        Console.WriteLine($"Epargne 1 de JD,Depot de 1500 : {banque["0004"]?.Solde}");
+        Console.WriteLine($"Epargne 1 de JD, Depot de 1500 : {banque["0004"]?.Solde}");
         banque["0004"]?.Retrait(200);
-        Epargne e = (Epargne)banque["0004"];
-        Console.WriteLine($"Epargne 1 de JD,Retrait de 200 : {banque["0004"]?.Solde}, Date de dernier retrait : {e.DateDernierRetrait}");
+        Console.WriteLine($"Epargne 1 de JD, Retrait de 200 : {banque["0004"]?.Solde}, Date de dernier retrait : {((Epargne)banque["0004"]).DateDernierRetrait}");
                 
         Console.WriteLine($"Avoir des comptes de {doeJohn.Prenom} : {banque.AvoirDesComptes(doeJohn)}");
          
