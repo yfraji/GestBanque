@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestBanque", "GestBanque\Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{0160D700-B56F-4C94-A4AA-6DCEB053CDE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoCelsiusFahrenheit", "ExoCelsiusFahrenheit\ExoCelsiusFahrenheit.csproj", "{2C2257CA-89F3-4EE2-B719-8B3639F54C61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExoCelsiusFahrenheit", "ExoCelsiusFahrenheit\ExoCelsiusFahrenheit.csproj", "{2C2257CA-89F3-4EE2-B719-8B3639F54C61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
