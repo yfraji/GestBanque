@@ -19,7 +19,7 @@ namespace Models
                 return _numero;
             }
 
-            set
+            private set
             {
                 _numero = value;
             }
@@ -38,7 +38,29 @@ namespace Models
             }
         }
 
-        public Personne Titulaire { get; set; }
+        public Personne Titulaire 
+        {
+            get
+            {
+                return _titulaire;
+            } 
+            private set
+            { 
+                _titulaire = value;
+            }
+        }
+
+        protected Compte(string numero, Personne titulaire)
+        {
+            _numero = numero;
+            Titulaire = titulaire;
+        }
+
+        protected Compte(string numero, Personne titulaire, double solde) : this(numero, titulaire)
+        {
+            _solde = solde;
+        }
+
 
         public void Depot(double montant)
         {

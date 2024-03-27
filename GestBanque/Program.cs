@@ -6,43 +6,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Banque banque = new Banque()
-        {
-            Nom = "My favorite bank"
-        };
+        Banque banque = new Banque("My favorite bank");
+        Personne doeJohn = new Personne("Doe", "John", new DateTime(1970, 1, 1));
 
-        Personne doeJohn = new Personne()
-        {
-            Nom = "Doe",
-            Prenom = "John",
-            DateNaiss = new DateTime(1970, 1, 1)
-        };
-
-        Compte courantJD1 = new Courant()
-        {
-            Numero = "0001",
-            LigneDeCredit = 500,
-            Titulaire = doeJohn
-        };
-
-        Compte courantJD2 = new Courant()
-        {
-            Numero = "0002",
-            LigneDeCredit = 500,
-            Titulaire = doeJohn
-        };
-
-        Compte courantJD3 = new Courant()
-        {
-            Numero = "0003",
-            LigneDeCredit = 500,
-            Titulaire = doeJohn
-        };
-        Compte epargneJD1 = new Epargne()
-        { 
-            Numero = "0004",
-            Titulaire = doeJohn
-        };
+        Compte courantJD1 = new Courant("0001", 500, doeJohn);
+        Compte courantJD2 = new Courant("0002", 500, doeJohn);
+        Compte courantJD3 = new Courant("0003", 500, doeJohn);
+        Compte epargneJD1 = new Epargne("0004", doeJohn);
 
         banque.Ajouter(courantJD1);
         banque.Ajouter(courantJD2);
@@ -59,7 +29,7 @@ class Program
         Console.WriteLine($"Epargne 1 de JD, Depot de 1500 : {banque["0004"]?.Solde}");
         banque["0004"]?.Retrait(200);
         Console.WriteLine($"Epargne 1 de JD, Retrait de 200 : {banque["0004"]?.Solde}, Date de dernier retrait : {((Epargne)banque["0004"]).DateDernierRetrait}");
-                
+
         Console.WriteLine($"Avoir des comptes de {doeJohn.Prenom} : {banque.AvoirDesComptes(doeJohn)}");
          
         banque.Supprimer("0001");

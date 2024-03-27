@@ -11,7 +11,7 @@ public class Courant : Compte
             return _ligneDeCredit;
         }
 
-        set
+        private set
         {
             if (value < 0)
             {
@@ -22,16 +22,25 @@ public class Courant : Compte
         }
     }
 
+    public Courant(string numero, Personne titulaire ) : base (numero, titulaire)
+    {
+
+    }
+
+    public Courant(string numero, double ligneDeCredit, Personne titulaire) : base(numero, titulaire)
+    {
+        _ligneDeCredit = ligneDeCredit;
+    }
+
+    public Courant(string numero, Personne titulaire, double solde) : base(numero, titulaire, solde)
+    { 
+        
+    }
+
     public override void Retrait(double montant)
     {
-        double ancienSolde = Solde;
-        Retrait(montant, LigneDeCredit);
 
-        if (ancienSolde >= 0D && Solde < 0)
-        {
-            Console.WriteLine("Solde insuffisant"); // => Erreur : Exception
-            return;
-        }
+        Retrait(montant, LigneDeCredit);
     }
     protected override double CalculInteret() 
     {

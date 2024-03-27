@@ -1,10 +1,16 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Reflection.Metadata;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Models;
 
 public class Banque
 {
-    public string Nom { get; set; }
+    public string Nom { get; init; }
+
+    public Banque(string nom) 
+    {
+        Nom = nom;
+    }
 
     private Dictionary<string, Compte> _comptes = new Dictionary<string, Compte>();
 
@@ -35,11 +41,11 @@ public class Banque
     public double AvoirDesComptes(Personne titulaire)
     {
         double total = 0;
-        foreach (Compte courant in _comptes.Values)
+        foreach (Compte compte in _comptes.Values)
         {
-            if (courant.Titulaire == titulaire)
+            if (compte.Titulaire == titulaire)
             {
-                total += courant;
+                total += compte;
             }
         }
             
