@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Models
+﻿namespace Models
 {
     public class Epargne : Compte
     {
-        private DateTime _DateDernierRetrait;
         public DateTime DateDernierRetrait { get; private set; }
 
         public Epargne(string numero, Personne titulaire) : base(numero, titulaire)
@@ -16,9 +9,9 @@ namespace Models
 
         }
 
-        public Epargne(string numero, Personne titulaire, double solde) : base(numero, titulaire, solde)
+        public Epargne(string numero, Personne titulaire, double solde, DateTime dateDernierRetrait) : base(numero, titulaire, solde)
         {
-
+            DateDernierRetrait = dateDernierRetrait;
         }
         public override void Retrait(double montant)
         {
