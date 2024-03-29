@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExoCelsiusFahrenheit", "ExoCelsiusFahrenheit\ExoCelsiusFahrenheit.csproj", "{2C2257CA-89F3-4EE2-B719-8B3639F54C61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoDelegate", "ExoDelegate\ExoDelegate.csproj", "{522A697E-A919-4CA4-AFE2-8371FE97E069}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C2257CA-89F3-4EE2-B719-8B3639F54C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522A697E-A919-4CA4-AFE2-8371FE97E069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522A697E-A919-4CA4-AFE2-8371FE97E069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522A697E-A919-4CA4-AFE2-8371FE97E069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522A697E-A919-4CA4-AFE2-8371FE97E069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
