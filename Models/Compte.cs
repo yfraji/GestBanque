@@ -11,7 +11,7 @@ namespace Models
         private string _numero;
         private double _solde;
         private Personne _titulaire;
-        public event PassageEnNegatifDelegate PassageEnNégatifEvent;
+        public event Action<Compte> PassageEnNégatifEvent;
 
         public string Numero
         {

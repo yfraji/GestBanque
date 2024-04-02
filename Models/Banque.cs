@@ -28,7 +28,7 @@ public class Banque
     public void Ajouter(Compte compte) 
     {
         _comptes.Add(compte.Numero, compte);
-        compte.PassageEnNégatifEvent += (compte) => Console.WriteLine($"Le compte {compte.Numero} vient de passer en négatif.");
+        compte.PassageEnNégatifEvent += PassageEnNegatifAction;
     }
 
     public void Supprimer(string Numero)
@@ -36,10 +36,12 @@ public class Banque
         if (!_comptes.ContainsKey(Numero))
             return;
 
-        _comptes[Numero].PassageEnNégatifEvent -= (compte) => Console.WriteLine($"Le compte {compte.Numero} vient de passer en négatif.");
-        _comptes.Remove(Numero);
+        _comptes[Numero].PassageEnNégatifEvent -= PassageEnNegatifAction;
     }
-
+    public void PassageEnNegatifAction(Compte compte) 
+    {
+        Console.WriteLine($"Le compte {compte.Numero} vient de passer en négatif.");
+    }
     public double AvoirDesComptes(Personne titulaire)
     {
         double total = 0;
