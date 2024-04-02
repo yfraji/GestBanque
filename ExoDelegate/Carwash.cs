@@ -2,7 +2,7 @@
 {
     public class Carwash
     {
-        private MonType _delegate;
+        public Action<Voiture, Voiture> _delegate;
         public Carwash()
         {
             //_delegate += Préparer;
@@ -10,10 +10,10 @@
             //_delegate += Secher;
             //_delegate += Finaliser;
 
-            _delegate += delegate (Voiture v) { Console.WriteLine($"Je prépare la voiture : {v.Plaque}"); };
-            _delegate += delegate (Voiture v) { Console.WriteLine($"Je lave la voiture : {v.Plaque}"); };
-            _delegate += delegate (Voiture v) { Console.WriteLine($"Je sèche la voiture : {v.Plaque}"); };
-            _delegate += delegate (Voiture v) { Console.WriteLine($"Je finalise la voiture : {v.Plaque}"); };
+            _delegate += (Voiture v, Voiture v2) => { Console.WriteLine($"Je prépare la voiture : {v.Plaque} et la voiture {v2.Plaque}"); };
+            _delegate += (Voiture v, Voiture v2) => Console.WriteLine($"Je lave la voiture : {v.Plaque}"); 
+            _delegate += delegate (Voiture v, Voiture v2) { Console.WriteLine($"Je sèche la voiture : {v.Plaque}"); };
+            _delegate += delegate (Voiture v, Voiture v2) { Console.WriteLine($"Je finalise la voiture : {v.Plaque}"); };
         }
         private void Préparer(Voiture v)
         {
@@ -33,7 +33,7 @@
         }
         public void Traiter(Voiture v)
         {
-            _delegate(v);
+            _delegate(v, v);
         }   
     }
 }
