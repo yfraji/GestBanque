@@ -11,6 +11,7 @@ namespace Models
         private string _numero;
         private double _solde;
         private Personne _titulaire;
+        public event PassageEnNegatifDelegate PassageEnNégatifEvent;
 
         public string Numero
         {
@@ -109,6 +110,11 @@ namespace Models
         public void AppliquerInteret() 
         {
             Solde += CalculInteret();
+        }
+
+        protected void RaisePassageEnNegatifEvent()
+        {
+            PassageEnNégatifEvent?.Invoke(this);
         }
     }
 }

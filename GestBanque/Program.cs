@@ -19,7 +19,7 @@ class Program
         {
             try
             {
-                c.LigneDeCredit = -500;
+                c1.LigneDeCredit = 500;
             }
             catch (Exception ex)
             {
@@ -31,7 +31,7 @@ class Program
         {
             try
             {
-                c.LigneDeCredit = -500;
+                c2.LigneDeCredit = 500;
 
 
             }
@@ -45,7 +45,7 @@ class Program
         {
             try
             {
-                c.LigneDeCredit = -500;
+                c3.LigneDeCredit = 500;
 
 
             }
@@ -59,7 +59,7 @@ class Program
         {
             try
             {
-                c.LigneDeCredit = -500;
+                c4.LigneDeCredit = -500;
 
 
             }
