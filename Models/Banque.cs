@@ -14,6 +14,11 @@ public class Banque
 
     private Dictionary<string, Compte> _comptes = new Dictionary<string, Compte>();
 
+    public int Count
+    {
+        get { return _comptes.Count; }
+    }
+
     public Compte? this[string Numero] 
     {
         get 
@@ -37,6 +42,7 @@ public class Banque
             return;
 
         _comptes[Numero].PassageEnNégatifEvent -= PassageEnNegatifAction;
+        _comptes.Remove(Numero);
     }
     public void PassageEnNegatifAction(Compte compte) 
     {
