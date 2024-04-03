@@ -64,7 +64,8 @@ namespace TestGestBanque
             Courant courant = new Courant("0001", doeJohn, 1000);
 
             //Act
-            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(() => (courant.LigneDeCredit = -500));
+            //InvalidOperationException exception = Assert.Throws<InvalidOperationException>(() => (courant.LigneDeCredit = -500));
+            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(() => (new Courant("01", -200, doeJohn))) ;
         }
 
         [Fact]

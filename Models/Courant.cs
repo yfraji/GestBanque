@@ -28,7 +28,7 @@ public class Courant : Compte
 
     public Courant(string numero, double ligneDeCredit, Personne titulaire) : base(numero, titulaire)
     {
-        _ligneDeCredit = ligneDeCredit;
+        LigneDeCredit = ligneDeCredit;
     }
 
     public Courant(string numero, Personne titulaire, double solde) : base(numero, titulaire, solde)
